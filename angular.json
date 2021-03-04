@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
@@ -96,10 +97,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": ["./node_modules/jquery/dist/jquery.js"]
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           }
         },
         "lint": {
@@ -128,6 +132,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TEST-ANGULAR"
 }
