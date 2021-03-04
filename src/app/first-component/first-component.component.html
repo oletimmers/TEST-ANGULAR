@@ -1,0 +1,51 @@
+<div class="drag-and-drop">
+  <h1>Voorbeeld van drag and drop icm met een lijstje.</h1>
+  <h3>Denk hierbij aan de kerstboom, met het opleggen van de kaarten.</h3>
+  <div class="example-container">
+    <h2>To do</h2>
+
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Done</h2>
+
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="progressbars">
+  <mat-radio-group [(ngModel)]="modusInteractive" aria-label="Select an progressbar">
+    <mat-radio-button value="indeterminate">intermediate</mat-radio-button>
+    <mat-radio-button value="buffer">buffer</mat-radio-button>
+    <mat-radio-button value="query">query</mat-radio-button>
+  </mat-radio-group>
+  <br>
+  <mat-progress-bar mode="{{modusInteractive}}"></mat-progress-bar>
+  <br>
+  <br>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <br>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+  <br>
+  <mat-progress-bar mode="query"></mat-progress-bar>
+  <br>
+  <br>
+</div>
+<hr>
