@@ -1,15 +1,19 @@
-<header>
-  <ul>
-    <li class="nav"><b>Navigatie</b></li>
-    <li routerLinkActive="active"><a routerLink="/first">UI voornamelijk</a></li>
-    <li routerLinkActive="active"><a routerLink="/second">Interactieve connectie met de db</a></li>
-    <li routerLinkActive="active"><a routerLink="/third">Authenticatie</a></li>
-  </ul>
-</header>
-<main>
-  <img src="assets/gifs/lekkergiffie.gif">
-  <router-outlet></router-outlet>
-</main>
-<footer>
-  Ryan, Jan Willem, Martijn en Ole &mdash; 2021
-</footer>
+<div [ngClass]="{'darkmode' : this.darkmodeService.darkmode}">
+  <header>
+    <ul>
+      <li class="nav"><b>Navigatie</b></li>
+      <li routerLinkActive="active"><a routerLink="/first">UI voornamelijk</a></li>
+      <li routerLinkActive="active"><a routerLink="/second">Interactieve connectie met de db</a></li>
+      <li routerLinkActive="active"><a routerLink="/third">Authenticatie</a></li>
+    </ul>
+    <mat-slide-toggle (change)="darkmode = switchDarkMode()" [checked]="darkmode" class="darkmode-toggle">Darkmode</mat-slide-toggle>
+
+  </header>
+  <main>
+    <img src="assets/gifs/lekkergiffie.gif">
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    Ryan, Jan Willem, Martijn en Ole &mdash; 2021
+  </footer>
+</div>

@@ -2,6 +2,13 @@
 html {
   margin: 0;
   padding: 0;
+  .darkmode {
+    color: white;
+    background-color: #2B2B2B;
+    hr {
+      background-color: orange;
+    }
+  }
 }
 footer {
   position: relative;
