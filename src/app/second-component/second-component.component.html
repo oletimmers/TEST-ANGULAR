@@ -1,1 +1,16 @@
-<p>second-component works!</p>
+<div class="join-lobby">
+  <h3>Join hier een game o.b.v. token.</h3>
+  <form (ngSubmit)="joinGame()">
+    <mat-form-field color="accent" class="example-full-width">
+      <mat-label>Game-token</mat-label>
+      <input matInput [(ngModel)]="tokenToJoin" name="tokenToJoin" placeholder="123456" maxlength="6">
+
+    </mat-form-field>
+    <br>
+    <button mat-fab color="green">
+      <span class="material-icons">
+        input
+      </span>
+    </button>
+  </form>
+</div>

@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./second-component.component.scss']
 })
 export class SecondComponentComponent implements OnInit {
-
+  public tokenToJoin: string;
   constructor() { }
 
   ngOnInit() {
   }
 
+  joinGame() {
+    alert('Join game with token: ' + this.tokenToJoin);
+  }
 }
