@@ -8,7 +8,14 @@ import { SecondComponentComponent } from './second-component/second-component.co
 import { ThirdComponentComponent } from './third-component/third-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import {MatProgressBarModule, MatRadioModule, MatSlideToggleModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule, MatInputModule,
+  MatProgressBarModule,
+  MatRadioModule,
+  MatSlideToggleModule
+} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {DarkmodeService} from './darkmode.service';
 
@@ -27,7 +34,11 @@ import {DarkmodeService} from './darkmode.service';
     MatProgressBarModule,
     MatRadioModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [DarkmodeService],
   bootstrap: [AppComponent]
