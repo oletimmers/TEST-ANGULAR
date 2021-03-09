@@ -15,10 +15,10 @@ export class SecondComponentComponent implements OnInit {
   }
 
   joinGame() {
-    alert('Join game with token: ' + this.tokenToJoin);
     this.http.get<any>('/person').subscribe(
       info => {
-        this.contentReturned = info.body.content;
+        const arraytje = info.body as Array<any>;
+        this.contentReturned = arraytje[arraytje.length - 1].name;
       },
       error => alert('fout bij getten')
     );
