@@ -16,10 +16,9 @@ export class SecondComponentComponent implements OnInit {
 
   joinGame() {
     alert('Join game with token: ' + this.tokenToJoin);
-    this.http.get<object>('/person').subscribe(
+    this.http.get<any>('/person').subscribe(
       info => {
-        const obj = info.body as Array<object>;
-        this.contentReturned = obj[1].toString();
+        this.contentReturned = info.body.content;
       },
       error => alert('fout bij getten')
     );
