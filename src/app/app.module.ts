@@ -18,6 +18,7 @@ import {
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {DarkmodeService} from './darkmode.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {DarkmodeService} from './darkmode.service';
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [DarkmodeService],
   bootstrap: [AppComponent]
