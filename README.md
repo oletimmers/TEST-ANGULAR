@@ -26,9 +26,9 @@ simpelere commando intikken.
  Om dit te fixen moest ik de properties vanuit die file ook in de package.json zetten, hierna werkte alles helemaal top.
 * Bij de installatie werd er meteen al een cypress package aangemaakt binnen het project met hierin al verschillende
 sample testen.
-* Ik geef het installeren een 7, het was simpel, echter duurde het installeren best lang (15 min bezig, terwijl een 
+* Ik geef het installeren een 7,5 => Het was simpel, echter duurde het installeren best lang (15 min bezig, terwijl een 
 soortgelijke package naar mijn idee altijd vele malen korter is) en de bug die ik zelf nog moest
-fixen waren wel minpunten.
+fixen waren wel minpunten. Groot pluspunt is wel dat er al sample packages aanwezig zijn.
 <hr>
 
 #### Handige linkjes verder:
