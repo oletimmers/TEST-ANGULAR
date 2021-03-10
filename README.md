@@ -17,7 +17,7 @@ Ole
 
 ## Hoe heb ik het geïnstalleerd?
 * Ik heb eerst `npm install cypress` gedaan
-* Dit duurde best lang maar eenmaal toen het klaar was, werkt de interface al meteen. Hiervoor moest je wel een lang 
+* Dit duurde best lang maar eenmaal toen het klaar was, werkte de interface al meteen. Hiervoor moest je wel een lang 
 commando tikken naar het pad van de cypress executable.
 * Om een korter commando te kunnen tikken moest ik het script toevoegen aan de package.json. Hierdoor kon ik nu het 
 simpelere commando intikken.
