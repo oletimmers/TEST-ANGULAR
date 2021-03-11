@@ -14,7 +14,8 @@ import {
   MatIconModule, MatInputModule,
   MatProgressBarModule,
   MatRadioModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatSnackBarModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {DarkmodeService} from './darkmode.service';
@@ -40,7 +41,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [DarkmodeService],
   bootstrap: [AppComponent]
