@@ -2,29 +2,29 @@
   <h1>Voorbeeld van drag and drop icm met een lijstje.</h1>
   <h3>Denk hierbij aan de kerstboom, met het opleggen van de kaarten.</h3>
   <div class="example-container">
-    <h2>To do</h2>
+    <h2>To Post</h2>
 
     <div
       cdkDropList
       #todoList="cdkDropList"
-      [cdkDropListData]="todo"
+      [cdkDropListData]="toPost"
       [cdkDropListConnectedTo]="[doneList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let person of toPost" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
     </div>
   </div>
 
   <div class="example-container">
-    <h2>Done</h2>
+    <h2>Posted</h2>
     <div
       cdkDropList
       #doneList="cdkDropList"
-      [cdkDropListData]="done"
+      [cdkDropListData]="posted"
       [cdkDropListConnectedTo]="[todoList]"
       class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      (cdkDropListDropped)="drop($event, true)">
+      <div class="example-box" *ngFor="let person of posted" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
     </div>
   </div>
 </div>
