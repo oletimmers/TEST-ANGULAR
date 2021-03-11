@@ -3,8 +3,8 @@ describe('Darkmodetest', () => {
     cy.visit('http://localhost:4200/')
   });
 
-  it('drag and drop "Martijn" should be dragged to second list, post should be successful', () => {
-    cy.get('#droplist-one > :nth-child(1)').then(el => {
+  function dragAndDrop() {
+    cy.get('#droplist-one > .example-box').then(el => {
       const draggable = el[0]; // Pick up this
       cy.get('#droplist-two').then(el => {
         const droppable = el[0]; // Drop over this
@@ -17,9 +17,37 @@ describe('Darkmodetest', () => {
         draggable.dispatchEvent(new MouseEvent('mouseup'));
 
       });
-
-      cy.get('#droplist-two').contains('Martijn');
-      cy.get('body').contains('Object opgeslagen');
     });
+
+  }
+
+  it('drag and drop "Martijn" should be dragged to second list, post should be successful', () => {
+    dragAndDrop();
+    cy.get('#droplist-two').contains('Martijn');
+    cy.get('body').contains('Object opgeslagen');
+  });
+
+  it('drag and drop all items should be dragged to second list, posts should be successful', () => {
+    for (let i = 0; i < 4; i++) {
+
+        dragAndDrop();
+        cy.get('body').contains('Object opgeslagen');
+
+    }
+  });
+
+  it('drag and drop all items piece by piece, should be dragged to second list, posts should be successful', () => {
+    dragAndDrop();
+    cy.get('#droplist-two').contains('Martijn');
+    cy.get('body').contains('Object opgeslagen');
+    dragAndDrop();
+    cy.get('#droplist-two').contains('Ryan');
+    cy.get('body').contains('Object opgeslagen');
+    dragAndDrop();
+    cy.get('#droplist-two').contains('Jan Willem');
+    cy.get('body').contains('Object opgeslagen');
+    dragAndDrop();
+    cy.get('#droplist-two').contains('Ole');
+    cy.get('body').contains('Object opgeslagen');
   });
 });
