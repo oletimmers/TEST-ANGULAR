@@ -6,6 +6,7 @@
 
     <div
       cdkDropList
+      id="droplist-one"
       #todoList="cdkDropList"
       [cdkDropListData]="toPost"
       [cdkDropListConnectedTo]="[doneList]"
@@ -19,6 +20,7 @@
     <h2>Posted</h2>
     <div
       cdkDropList
+      id="droplist-two"
       #doneList="cdkDropList"
       [cdkDropListData]="posted"
       [cdkDropListConnectedTo]="[todoList]"
