@@ -17,6 +17,7 @@ export class FirstComponentComponent implements OnInit {
   ];
 
   posted: Person[] = [
+
   ];
 
   modusInteractive = 'determinate';

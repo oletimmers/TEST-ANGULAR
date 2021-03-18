@@ -11,7 +11,7 @@
       [cdkDropListConnectedTo]="[doneList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let person of toPost" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
+      <div id='toPost' class="example-box" *ngFor="let person of toPost" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
       [cdkDropListConnectedTo]="[todoList]"
       class="example-list"
       (cdkDropListDropped)="drop($event, true)">
-      <div class="example-box" *ngFor="let person of posted" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
+      <div id='Posted' class="example-box" *ngFor="let person of posted" [cdkDragData]="person" cdkDrag>{{person.name}}</div>
     </div>
   </div>
 </div>
